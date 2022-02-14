@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Navbar from './components/Navbar';
+import ItemListContainer from './components/ItemListContainer';
+
 function App() {
   return (
     <div className="App">
-      <h1>Hola Coderhouse</h1>
-      <hr></hr>
-      <p>Desafío: Crear la App utilizando el CLI</p>
+
+      <Navbar/>
+      <ItemListContainer/>
+
     </div>
   );
 }
 
+
 export default App;
+
+

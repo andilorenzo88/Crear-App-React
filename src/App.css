@@ -1,10 +1,57 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
   text-align: center;
 }
-
+.header{
+  height: 150px;
+  background: black;
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar{
+  width: 100%;
+}
+.navbar-container{
+  height: 50px;
+  display: flex;
+  border: .5px none black;
+  box-shadow: 2px 2px 5px #1111117a;
+  /* background: black; */
+}
+.title-app {
+  color: wheat;
+  text-shadow: 1px 1px 10px gold;
+}
+.navbar-container>a{
+  margin: auto;
+  text-decoration: none;
+  font-size: .9rem;
+  color: rgb(32, 30, 30);
+}
+.navbar-container>a:hover{
+  text-shadow: none;
+  color: orange;
+  transition: .5s all ease;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.cart {
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-right: 1%;
+}
+
+.icono-pegaso{
+  width: 150px;
+  height: 150px;
+  margin-top: 0px;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
