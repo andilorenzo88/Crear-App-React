@@ -1,5 +1,4 @@
 import React from 'react'
-import { Component } from 'react'
 import logo from '../Assets/img/logo.png'
 import CartWidget from './CartWidget'
 

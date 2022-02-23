@@ -1,0 +1,62 @@
+[
+    {
+        "id":1, 
+        "marca": "Apple", 
+        "pulgadas":13.3,
+        "storage": 256,
+        "ram": 8, 
+        "precio": 1350, 
+        "procesador":"M1",
+        "img": "./img/macbook.png"
+    },
+    {
+        "id":2, 
+        "marca": "Lenovo", 
+        "pulgadas":15.6, 
+        "storage": 512,
+        "ram": 8, 
+        "precio": 1200, 
+        "procesador":"Intel® Core™ i7",
+        "img": "./img/lenovo.png"
+    },
+    {
+        "id":3, 
+        "marca": "Asus", 
+        "pulgadas":14, 
+        "storage": 256,
+        "ram": 16, 
+        "precio": 990, 
+        "procesador":"Intel® Core™ i5",
+        "img": "./img/asus.png"
+    },
+    {
+        "id":4, 
+        "marca": "Acer", 
+        "pulgadas":15, 
+        "storage": 1000,
+        "ram": 16, 
+        "precio": 1400, 
+        "procesador":"Intel®Core™i7",
+        "img": "./img/acer.png"
+    },
+    {
+        "id":5, 
+        "marca": "MSI", 
+        "pulgadas":14,
+        "storage": 512, 
+        "ram": 16, 
+        "precio": 800, 
+        "procesador":"Intel® Core™ i7",
+        "img": "./img/msi.png"
+    },
+    {
+        "id":6, 
+        "marca": "Hp", 
+        "pulgadas":14, 
+        "storage": 512,
+        "ram": 16, 
+        "precio": 800, 
+        "procesador":"Intel® Core™ i7",
+        "img": "./img/hp.png"
+    }
+]

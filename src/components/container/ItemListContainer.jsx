@@ -1,14 +1,12 @@
 import React from 'react'
+import ItemList from './ItemList'
 
-let style = {
-  color: 'red'
-}
 
-const ItemListContainer = ({name}) => {
+const ItemListContainer = () => {
   return (
     
       <div>
-        <h1 style={style}>Hola {name}, bienvenido a mi App !</h1>  
+        <ItemList/>
       </div>
 
   )

@@ -1,0 +1,120 @@
+.container-product{
+    width: 25%;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 6px;
+    height: 90%;
+    margin: 50px 20px;
+    margin: 50px 20px ;
+    position: relative;
+}
+.container-product>img{
+    position: absolute;
+    width: 15%;
+    bottom: 3px;
+    left: 0;
+    border-radius: 50%;
+}
+
+.container-product:hover{
+    background: #111111bd;
+    transition: 1.5s all ease;
+    width: 26%;
+    height: 95%;
+
+}
+
+.product-img{
+    width: 100%;
+}
+.product-img>img{
+    width: 80%;
+    margin-top: 20px;
+}
+.product-details{
+    color: steelblue;
+    text-shadow: .1px .1px  black;
+    font-size: .8rem;
+}
+.product-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-price>h3{
+    border-radius: 6px;
+    width: 50%;
+    font-size: .9rem;  
+    color: red;
+}
+.product-price>h3:hover{
+    color: whitesmoke;
+    transition: .6s all ease;
+}
+.product-price>p{
+    margin-top: -3%;
+    background-color: brown;
+    display: inline-block;
+    width: 35%;
+    height: .7rem;
+    font-size: .5rem;
+    color: wheat;
+
+}
+.product-btn-carrito{
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: blanchedalmond;
+
+}
+.product-btn-carrito>button{
+    border-radius: 5px;
+    background: steelblue;
+    border: none;
+    color: wheat;
+    font-weight: bold;
+    height: 30px;
+    width: 50%;
+    cursor: pointer;
+
+}
+.product-btn-carrito>button:hover{
+    transition: 1s all ease;
+    background: brown;
+    color: white;
+}
+
+@media screen and (min-width: 480px) and (max-width:790px){
+    .container-product{
+        width: 40%;
+        box-shadow: 1px 1px 5px black;
+        border-radius: 6px;
+        height: 100%;
+        margin: 50px 20px;
+        margin: 50px 20px ;
+        position: relative;
+    }
+    .container-product:hover{
+        background: #111111bd;
+        transition: 1s all ease;
+        width: 44%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container-product{
+        width: 70%;
+        box-shadow: 1px 1px 5px black;
+        border-radius: 6px;
+        height: 100%;
+        margin: 50px 20px;
+        margin: 50px 20px ;
+        position: relative;
+    }
+    .container-product:hover{
+        background: #111111bd;
+        transition: 2s all ease;
+        width: 75%;
+    }
+}
