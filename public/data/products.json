@@ -15,7 +15,7 @@
         "pulgadas":15.6, 
         "storage": 512,
         "ram": 8, 
-        "precio": 1200, 
+        "precio": 655, 
         "procesador":"Intel® Core™ i7",
         "img": "./img/lenovo.png"
     },
@@ -23,7 +23,7 @@
         "id":3, 
         "marca": "Asus", 
         "pulgadas":14, 
-        "storage": 256,
+        "storage": 512,
         "ram": 16, 
         "precio": 990, 
         "procesador":"Intel® Core™ i5",
@@ -35,7 +35,7 @@
         "pulgadas":15, 
         "storage": 1000,
         "ram": 16, 
-        "precio": 1400, 
+        "precio": 1399, 
         "procesador":"Intel®Core™i7",
         "img": "./img/acer.png"
     },
@@ -45,7 +45,7 @@
         "pulgadas":14,
         "storage": 512, 
         "ram": 16, 
-        "precio": 800, 
+        "precio": 859, 
         "procesador":"Intel® Core™ i7",
         "img": "./img/msi.png"
     },

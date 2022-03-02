@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+/* body{
+    /* background: #111111bd;
+} */
+
+.container-item-details{
+    width: 80%;
+    margin:50px auto;
+    /* box-shadow: 1px 1px 5px black; */
+    height: 100%;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+.preview{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    height: 450px;
+    padding-top: 20px;
+}
+.img-computer{
+    width: 60%;
+    padding: 20px 0px;
+}
+.img-computer>img{
+    width: 65%;
+}
+.description{
+    width: 35%;
+    font-size: .8rem;
+    text-align: center;
+    margin-right: 20px;
+}
+.description>h4{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    font-weight: bold;
+    margin-top: 20%;
+    font-size: 3rem;
+    border-bottom: 2px dashed black;
+    padding-bottom: 20px;
+}
+.description>p{
+    text-align: center;
+    /* margin-top: 50px; */
+    font-weight: bold;
+    color: brown;
+    font-size: 1rem;
+}
+.description>button{
+    background: black;
+    border: none;
+    width: 50%;
+    height: 40px;
+    color: cornsilk;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bo;
+    margin-top: 5%;
+    box-shadow: 1px 1px 5px black;
+    font-weight: bold;
+}
+.description>button:hover{
+    background: whitesmoke;
+    border: 1px solid black;
+    color: black;
+    transition: .5s all ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.icon-btn-cart{
+    margin-left: 5px;
+}
+.icon-ship{
+    margin-right: 5px;
+}
+
+.technical-descript{
+    width: 100%;
+    margin-top: 20px;
+}
+.technical-descript>h2{
+    background: #111111db;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 5px 20px;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+    background: #111111bd;
+}
+.table-technical-desc{
+    width: 70%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+}
+.table-technical-desc>tbody>tr{
+    height: 40px;
+
+}
+.props-tech{
+    width: 20%;
+    background:#11111196;
+    color: white;
+    font-size: .9rem;
+
+}
+.value-props{
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    font-size: .8rem;
+
+    /* background: rgba(128, 128, 128, 0.24); */
+}
+.value-props:hover{
+    background: rgba(128, 128, 128, 0.24); 
+
+}
