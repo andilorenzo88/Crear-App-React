@@ -27,7 +27,7 @@ const Item = ({p}) => {
             </div>
 
             <div className="product-btn-carrito">
-                <NavLink to={`/productos/${p.id}`}>Ver detalle <FontAwesomeIcon icon={faEye} className="icon-eye"/></NavLink>
+                <NavLink to={`/producto/${p.id}`}>Ver detalle <FontAwesomeIcon icon={faEye} className="icon-eye"/></NavLink>
             </div>
         </div>        
     )

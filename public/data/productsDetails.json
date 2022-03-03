@@ -17,14 +17,14 @@
         "bateria":"58.2Wh",
         "peso":"1.4kg",
         "precio": "1.250,00", 
-        "img": "./img/macbook.png"
+        "img": "/img/macbook.png" 
     },
     {
         "id":2, 
         "Title": "Lenovo IdeaPad 3 15ITL6, 15.6' FHD, Intel® Core™ i7-1165G7, 8 GB RAM, 512 GB SSD, Iris® Xe, FDOS",
         "pulgadas":15.6,
         "pantalla": "TN",
-        "resolucion":"1920 x 1080 píxeles",
+        "resolución":"1920 x 1080 píxeles",
         "ram": 8, 
         "procesador":"Intel® Core™ i7-1165G7",
         "nucleos":4,
@@ -37,14 +37,14 @@
         "bateria":"38Wh",
         "peso":"1.67kg",
         "precio": "655,00", 
-        "img": "./img/lenovo.png"
+        "img": "/img/lenovo.png"
     },
     {
         "id":3, 
         "Title": "ASUS ZenBook 14 UX425EA-KI358T, 14' FHD, Intel® Core™ i7-1165G7, 16GB, 512 GB, Iris® Xe, W10",
         "pulgadas":14,
         "pantalla": "IPS",
-        "resolucion":"1920 x 1080 píxeles",
+        "resolución":"1920 x 1080 píxeles",
         "ram": 16, 
         "procesador":"Intel® Core™ i7-1165G7",
         "nucleos":4,
@@ -57,14 +57,14 @@
         "bateria":"67Wh",
         "peso":"1.17kg",
         "precio": "999,00", 
-        "img": "./img/asus.png"
+        "img": "/img/asus.png"
     },
     {
         "id":4, 
         "Title": "Acer Predator Helios300 PH315-54-71EM, 15',Intel®Core™i7-11800H,16GB,1TB SSD,RTX3060,FDOS",
         "pulgadas":15,
         "pantalla": "IPS",
-        "resolucion":"1920 x 1080 píxeles",
+        "resolución":"1920 x 1080 píxeles",
         "ram": 16, 
         "procesador":"Intel® Core™ i7-11800H",
         "nucleos":8,
@@ -77,14 +77,14 @@
         "bateria":"58.2Wh",
         "peso":"2.3kg",
         "precio": "1.399,00", 
-        "img": "./img/acer.png"
+        "img": "/img/acer.png"
     },
     {
         "id":5, 
         "Title": "MSI Modern 14 B11MO-079XES, 14', FHD, Intel® Core™ i7-1165G7, 16 GB RAM, 512 GB SSD, UHD, FDOS",
         "pulgadas":14,
         "pantalla": "IPS",
-        "resolucion":"1920 x 1080 píxeles",
+        "resolución":"1920 x 1080 píxeles",
         "ram": 16, 
         "procesador":"Intel® Core™ i7-1165G7",
         "nucleos":4,
@@ -97,14 +97,14 @@
         "bateria":"52Wh",
         "peso":"1.3kg",
         "precio": "859,00", 
-        "img": "./img/msi.png"
+        "img": "/img/msi.png"
     },
     {
         "id":6, 
         "Title": "HP ENVY Laptop 14-eb0001ns, 14' WUXGA, Intel® Core™ i7-1165G7, 16GB, 512GB SSD, W10H, Plata",
         "pulgadas":14,
         "pantalla": "WUXGA",
-        "resolucion":"1920 x 1200 píxeles",
+        "resolución":"1920 x 1200 píxeles",
         "ram": 16, 
         "procesador":"Intel® Core™ i7-1165G7",
         "nucleos":4,
@@ -117,6 +117,8 @@
         "bateria":"63Wh",
         "peso":"1.4kg",
         "precio": "1.250,00", 
-        "img": "./img/hp.png"
+        "img": "/img/hp.png"
     } 
 ]
+
+

@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
         <div className="navbar-container">
           <NavLink to='/'>Home</NavLink>
-          <NavLink to='/productos'>Productos</NavLink>
+          <NavLink to='/catalogo'>Productos</NavLink>
           <NavLink to='/location'>Donde Estamos</NavLink>
           <NavLink to='/contact'>Contacto</NavLink>
           <NavLink to='/carrito'><CartWidget/></NavLink>

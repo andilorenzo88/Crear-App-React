@@ -1,41 +1,33 @@
-import React from 'react'
-import {  useEffect, useState} from 'react';
-import { useParams } from 'react-router';
-import ItemDetails from './ItemDetails';
-
+import React, { useEffect, useState } from 'react';
+import ItemDetails from './ItemDetails'
+import {useParams} from 'react-router'
+import Spinner from '../utilities/Spinner';
 
 const ItemDetailContainer = () => {
 
-  const {id} = useParams();
+    const [itemDetail, setDetail] = useState(null)
+    const {id}= useParams()
 
-  const [productDetail, setDetail] = useState([])
+    useEffect(() => {
 
-  useEffect(() => {
+        setTimeout(getDetail,2000)
 
-    setTimeout(getProductDetail(),2000)
-  
-  }, [])
-  
-  
-  const getProductDetail = () =>{
+    },[])
+    
+    const getDetail = () => {
 
-    const url = './data/productsDetails.json'
+        const url = fetch('/data/productsDetails.json')
 
-    fetch(url).then(res=> res.json() ).then(result=> {
-        setDetail(result[id-1])
+        url.then((res) =>res.json()).then((res) => {
+            console.log(res);
+            setDetail(res[id-1])}) 
+    }
 
-      })
-
-  } 
-
-  return (
-      <div> {productDetail ? 
-      <ItemDetails product={productDetail}/> 
-      :
-      ''
-      }
-      </div>
-  )
+    return (
+        <div>
+            {itemDetail? <ItemDetails product={itemDetail}/> :  <Spinner/> }
+        </div>
+    )
 }
 
 export default ItemDetailContainer

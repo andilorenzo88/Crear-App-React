@@ -3,6 +3,7 @@ import Item from './Item';
 import { useEffect, useState } from 'react';
 
 import './../../css/ItemList.css'
+import Spinner from '../utilities/Spinner';
 
 
 
@@ -19,8 +20,8 @@ const ItemList = () => {
 
     const getProducts = () => {
 
-        const request = fetch('./data/products.json')
- 
+        const request = fetch('/data/products.json')
+
         request.then(response =>response.json())
             .then(res => {
                 console.log(res);
@@ -33,7 +34,7 @@ const ItemList = () => {
     // Recorro arreglo de productos para renderizar en la interfaz
     return (
         <>
-            <div className="spinner">{spinner!=false? 'Cargando productos...': false}</div>
+            <div className="spinner">{spinner!=false? <Spinner/>: false}</div>
             
             <div className='flex-container-il'> 
                 {products.map( p =>{

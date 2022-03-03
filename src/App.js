@@ -3,9 +3,10 @@ import './App.css';
 import React from 'react';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/container/ItemListContainer';
-import ItemDetailContainer from './components/container/ItemDetailContainer';
+
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import HomeContainer from './components/container/HomeContainer';
+import ItemDetailContainer from './components/container/ItemDetailContainer';
 
 
 
@@ -15,18 +16,16 @@ function App() {
 
     <BrowserRouter>
         <Navbar/>
-        <div className="App">
+        <main className="App">
           <Routes>
             <Route path='/' element={<HomeContainer/>}/>
-            <Route path='/productos' element={<ItemListContainer/>}/>
-            <Route path='/productos/:id' element={<ItemDetailContainer/>}/>
-            <Route path='/location' element={<ItemListContainer/>} text='Donde estamos'/>
-            <Route path='/contact' element={<ItemListContainer/>} text='Contacto'/>
-            <Route path='/carrito' element={<ItemListContainer/>}text='cart'/>
-
-
+            <Route path='/catalogo' element={<ItemListContainer/>}/>
+            <Route path='/producto/:id' element={<ItemDetailContainer/>}/>
+            <Route path='/location' element={<ItemListContainer/>}/>
+            <Route path='/contact' element={<ItemListContainer/>}/>
+            <Route path='/carrito' element={<ItemListContainer/>}/>
           </Routes>
-        </div>
+        </main>
     </BrowserRouter>
 
   );
