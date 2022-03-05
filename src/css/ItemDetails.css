@@ -12,6 +12,7 @@
     height: 100%;
     background: whitesmoke;
     border-radius: 10px;
+    margin-bottom: 400px;
 }
 .preview{
     width: 100%;
@@ -40,8 +41,10 @@
     font-weight: bold;
     margin-top: 20%;
     font-size: 3rem;
-    border-bottom: 2px dashed black;
+    border-bottom: 2px dashed #111111bd;
     padding-bottom: 20px;
+    text-shadow: 1px 1px 2px black;
+    color: #111111bd;
 }
 .description>p{
     text-align: center;

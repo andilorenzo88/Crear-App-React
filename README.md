@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+PEGASUS COMPUTERS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El proyecto consiste en una tienda/ecommerce solo de computadoras.
 
-## Available Scripts
+En la pagina principal/Home encontraremos un "widget" que nos direccion al catalogo donde se muestran todos los productos en venta.
 
-In the project directory, you can run:
+Al ingresar al catalogo, obtenemos la data despues de 2 segundos con una llamada fetch desde un archivo json local en public/data/products, donde aparece un "spinner" que desaparece en el momento que se cargan los productos.
+El catalogo de productos presenta al momento algunos filtros entre ellos Categoria, Marca y ram... 
+Los productos son renderizados al virtual dom con el metodo map y los filtros realizados con el evento onChange a traves de metodos filters
 
-### `npm start`
+Ademas del catalogo, el proyecto obtiene a traves de otra llamada fetch el detalle del producto que se puede visualizar haciendo click en el boton "ver detalle" utilizando como en el anterior caso los hooks de react UseState,UseEffect y ademas el UseParams pasandole como parametro dinamico el ID de cada item para ver el detalle, tmb en este caso una vez que entra al detalle ingresa despues de 2seg con un spinner hasta cargar la data correspondiente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Haciendo click en el logo de la pagina nos redirecciona nuevamente en la pagina principal.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El diseño de la app es creado con CSS puro, no se utilizan frameworks como Bootstrap y/o Tailwind.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Instale una dependencia de FontAwesome para los iconos como tambien la de react-icon, ademas de instalar app-router-dom para crear las rutas necesarias y poder linkear/conectar las secciones de App.js y el Navbar como darle rutas a los botones "catalogo" en la pagina inicial y "ver detalle" en Item.jsx

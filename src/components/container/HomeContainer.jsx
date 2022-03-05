@@ -1,10 +1,11 @@
 import React from 'react'
-import Spinner from '../utilities/Spinner'
+import Home from '../stateless/Home'
 
 const HomeContainer = () => {
+
   return (
     <div>
-        <h1>Inicio</h1>    
+      <Home/>
     </div>
   )
 }

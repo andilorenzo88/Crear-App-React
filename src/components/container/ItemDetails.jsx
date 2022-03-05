@@ -7,6 +7,7 @@ import './../../css/ItemDetails.css'
 
 const ItemDetails = ({product}) => {
 
+    const {img, descripcion, precio, pulgadas, pantalla, resolucion, ram, procesador, nucleos, almacenamiento, capacidad, conexiones, so, autonomia,bateria,peso} = product
 
     return (
         <div className="container-item-items">
@@ -14,12 +15,12 @@ const ItemDetails = ({product}) => {
             <div className="preview">
 
                 <div className="img-computer" >
-                    <img src={(product.img)} alt= 'foto'/>  
+                    <img src={(img)} alt= 'foto'/>  
                 </div>
                 
                 <div className="description">
-                    <h3>{product.Title}</h3>
-                    <h4>{product.precio} €</h4>
+                    <h3>{descripcion}</h3>
+                    <h4>{precio} €</h4>
                     <button type="submit">Agregar al carrito <span className="icon-btn-cart"><FontAwesomeIcon icon={faCartArrowDown}/></span></button>
                     <p><FontAwesomeIcon icon={faTruckFast} className="icon-ship"/>Envío gratis </p>
 
@@ -33,51 +34,51 @@ const ItemDetails = ({product}) => {
                     <tbody>
                         <tr>
                             <td className="props-tech">Pulgadas</td>
-                            <td className="value-props"> {product.pulgadas}</td>
+                            <td className="value-props"> {pulgadas}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Pantalla</td>
-                            <td className="value-props">{product.pantalla}</td>
+                            <td className="value-props">{pantalla}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Resolución:</td>
-                            <td className="value-props">{product.resolucion}</td>
+                            <td className="value-props">{resolucion}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">RAM</td>
-                            <td className="value-props">{product.ram}</td>
+                            <td className="value-props">{ram}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Procesador</td>
-                            <td className="value-props">{product.procesador}</td>
+                            <td className="value-props">{procesador}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Nucleos</td>
-                            <td className="value-props">{product.nucleos}</td>
+                            <td className="value-props">{nucleos}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Almacenamiento</td>
-                            <td className="value-props">{product.almacenamiento} {product.capacidad}</td>
+                            <td className="value-props">{almacenamiento} {capacidad}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Conexiones</td>
-                            <td className="value-props">{product.conexiones}</td>
+                            <td className="value-props">{conexiones}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Sistema Operativo</td>
-                            <td className="value-props">{product.so}</td>
+                            <td className="value-props">{so}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Autonomia</td>
-                            <td className="value-props">{product.autonomia}</td>
+                            <td className="value-props">{autonomia}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Bateria</td>
-                            <td className="value-props">{product.bateria}</td>
+                            <td className="value-props">{bateria}</td>
                         </tr>
                         <tr>
                             <td className="props-tech">Peso</td>
-                            <td className="value-props">{product.peso}</td>
+                            <td className="value-props">{peso}</td>
                         </tr>
                     </tbody>
                 </table>

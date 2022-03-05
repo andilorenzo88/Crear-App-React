@@ -2,9 +2,10 @@
     {
         "id":1, 
         "marca": "Apple", 
+        "categoria":"Notebook",
         "pulgadas":13.3,
         "storage": 256,
-        "ram": 8, 
+        "RAM": "8", 
         "precio": 1350, 
         "procesador":"M1",
         "img": "/img/macbook.png"
@@ -12,9 +13,10 @@
     {
         "id":2, 
         "marca": "Lenovo", 
+        "categoria":"Notebook",
         "pulgadas":15.6, 
         "storage": 512,
-        "ram": 8, 
+        "RAM": "8", 
         "precio": 655, 
         "procesador":"Intel® Core™ i7",
         "img": "/img/lenovo.png"
@@ -22,9 +24,10 @@
     {
         "id":3, 
         "marca": "Asus", 
+        "categoria":"Ultrabook",
         "pulgadas":14, 
         "storage": 512,
-        "ram": 16, 
+        "RAM": "16", 
         "precio": 990, 
         "procesador":"Intel® Core™ i5",
         "img": "/img/asus.png"
@@ -32,9 +35,10 @@
     {
         "id":4, 
         "marca": "Acer", 
+        "categoria":"Gaming",
         "pulgadas":15, 
         "storage": 1000,
-        "ram": 16, 
+        "RAM": "16", 
         "precio": 1399, 
         "procesador":"Intel®Core™i7",
         "img": "/img/acer.png"
@@ -42,9 +46,10 @@
     {
         "id":5, 
         "marca": "MSI", 
+        "categoria":"Ultrabook",
         "pulgadas":14,
         "storage": 512, 
-        "ram": 16, 
+        "RAM": "16", 
         "precio": 859, 
         "procesador":"Intel® Core™ i7",
         "img": "/img/msi.png"
@@ -52,11 +57,143 @@
     {
         "id":6, 
         "marca": "Hp", 
+        "categoria":"Ultrabook",
         "pulgadas":14, 
         "storage": 512,
-        "ram": 16, 
+        "RAM": "16", 
         "precio": 800, 
         "procesador":"Intel® Core™ i7",
         "img": "/img/hp.png"
+    },
+    {
+        "id":7, 
+        "marca": "Apple",
+        "categoria":"Notebook",
+        "pulgadas":13.3, 
+        "storage": 256,
+        "RAM": "8",
+        "precio": 980, 
+        "procesador":"M1",
+        "img": "/img/mac3.png"
+    },
+    {
+        "id":8, 
+        "marca": "Apple", 
+        "categoria":"Notebook",
+        "pulgadas":14.2, 
+        "storage": 512,
+        "RAM": "16", 
+        "precio": 2250, 
+        "procesador":"M1 Pro",
+        "img": "/img/mac2.png"
+    },
+    {
+        "id":9, 
+        "marca": "Hp",
+        "categoria":"Ultrabook", 
+        "pulgadas":14, 
+        "storage": 512,
+        "RAM": "16", 
+        "precio": 1299, 
+        "procesador":"Intel® Core™ i7-1165G7",
+        "img": "/img/hp2.png"
+    },
+    {
+        "id":10, 
+        "marca": "Lenovo", 
+        "categoria":"Ultrabook",
+        "pulgadas":14, 
+        "storage": 512,
+        "RAM": "8",
+        "precio": 960, 
+        "procesador":"Intel® Core™ i7-1165G7",
+        "img": "/img/lenovo2.png"
+    },
+    {
+        "id":11, 
+        "marca": "Lenovo", 
+        "categoria":"Notebook",
+        "pulgadas":15.6, 
+        "storage": 256,
+        "RAM": "8",
+        "precio": 960, 
+        "procesador":"Intel® Core™ i3-1115G4",
+        "img": "/img/lenovo3.png"
+    },    
+    {
+        "id":12, 
+        "marca": "Asus", 
+        "categoria":"Ultrabook",
+        "pulgadas":14, 
+        "storage": 1000,
+        "RAM": "16", 
+        "precio": 1600, 
+        "procesador":"Intel® Core™ i7-1165G7",
+        "img": "/img/asus2.png"
+    },
+    {
+        "id":13, 
+        "marca": "Asus", 
+        "categoria":"Gaming",
+        "pulgadas":14, 
+        "storage": 1000,
+        "RAM": "16", 
+        "precio": 1600, 
+        "procesador":"AMD Ryzen™ 9 4900HS",
+        "img": "/img/asus3.png"
+    },
+    {
+        "id":14, 
+        "marca": "Asus", 
+        "categoria":"Gaming",
+        "pulgadas":15.6, 
+        "storage": 2000,
+        "RAM": "32", 
+        "precio": 3990, 
+        "procesador":"AMD Ryzen™ 9 5900HS",
+        "img": "/img/asus4.png"
+    },
+    {
+        "id":15, 
+        "marca": "MSI", 
+        "categoria":"Gaming",
+        "pulgadas":15.6, 
+        "storage": 1000,
+        "RAM": "32", 
+        "precio": 3090, 
+        "procesador":"Intel® Core™ i7-12700H",
+        "img": "/img/msi2.png"
+    },
+    {
+        "id":16, 
+        "marca": "Hp", 
+        "categoria":"Gaming",
+        "pulgadas":16.1, 
+        "storage": 1000,
+        "RAM": "32", 
+        "precio": 1790, 
+        "procesador":"Intel® Core™ i7-11800H",
+        "img": "/img/hp3.png"
+    },
+    {
+        "id":17, 
+        "marca": "Huawei", 
+        "categoria":"Ultrabook",
+        "pulgadas":15.6, 
+        "storage": 512,
+        "RAM": "8",
+        "precio": 790, 
+        "procesador":"Intel® Core™ i5-1135G7",
+        "img": "/img/huawei.png"
     }
+
+
+
+
+
+
+
+
+
+    
 ]

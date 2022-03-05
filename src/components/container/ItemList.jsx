@@ -1,17 +1,20 @@
 import React from 'react';
-import Item from './Item';
 import { useEffect, useState } from 'react';
 
+import Item from './Item';
+import Filters from '../stateless/Filters';
+import Spinner from '../stateless/Spinner';
 import './../../css/ItemList.css'
-import Spinner from '../utilities/Spinner';
 
 
 
 const ItemList = () => {
 
-    const [products, setProducts] = useState([]);
-    const [spinner, showSpinner] = useState(true)
+    const [products, setProducts] = useState([])
+    const [filters, setFilters] = useState([])
+    const [spinner, setSpinner] = useState(true)
 
+    console.log(filters);
 
     useEffect(()=>{
 
@@ -25,24 +28,38 @@ const ItemList = () => {
         request.then(response =>response.json())
             .then(res => {
                 console.log(res);
-                setProducts(res)
-                showSpinner(false)
+                setProducts(res);
+                setSpinner(false)
             })
     }
-    
+    const filterCategory = (e)=> {
+
+        const search = e.target.value
+        console.log(search);
+        setFilters(products.filter(cat => cat.categoria === search))
+    }
+    const filterBrand = (e)=> {
+        
+        return setFilters(products.filter(brand => brand.marca === e.target.value))
+    }
+    const filterRam = (e)=> {
+
+        const search = e.target.value
+        console.log(search);
+        return setFilters(products.filter(ram => ram.RAM === search))
+    }
 
     // Recorro arreglo de productos para renderizar en la interfaz
     return (
         <>
-            <div className="spinner">{spinner!=false? <Spinner/>: false}</div>
-            
+            <div className="spinner">{spinner!=false? <Spinner/>: ''}</div>
+            <Filters categoria={filterCategory} brand={filterBrand} ram={filterRam}/>  
             <div className='flex-container-il'> 
-                {products.map( p =>{
-                    return <Item 
-                        key={p.id} 
-                        p={p}
-                    />
-                })}
+                {filters.length==0 ?
+                products.map(p=> <Item key={p.id} p={p}/>)
+                :
+                filters.map(p=> <Item key={p.id} p={p}/>)
+                }
             </div>
         </>
     )

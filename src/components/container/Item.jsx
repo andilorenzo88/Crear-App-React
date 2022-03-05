@@ -1,14 +1,14 @@
 import React from 'react'
-import './../../css/item.css'
-import logo from './../../Assets/img/logo.png'
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from 'react-router-dom';
+import logo from './../../Assets/img/logo.png'
 
+import './../../css/item.css'
 
 // PRODUCTO UI
 const Item = ({p}) => {
-    // const {img, marca,pulgadas,storage,ram, procesador, precio} = p
+    const {img, marca,pulgadas,storage,RAM, procesador, precio} = p
     return (
         <div className="container-product">
             <img src={logo} alt="logo" />
@@ -18,7 +18,7 @@ const Item = ({p}) => {
             </div>
 
             <div className="product-details">
-                <p> {p.marca} {p.pulgadas}' | {p.storage}GB | RAM: {p.ram}GB | {p.procesador}</p>
+                <p> {p.marca} {p.pulgadas}' | {p.storage}GB | RAM: {p.RAM}GB | {p.procesador}</p>
             </div>
 
             <div className="product-price">
