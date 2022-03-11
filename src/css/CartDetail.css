@@ -1,0 +1,108 @@
+.tienda{
+    position: relative;
+    margin-bottom: 500px;
+}
+.container-cart{
+    margin-top: 40px;
+}
+.container-cart_detail{
+    display: flex;
+    margin-left: 100px;
+    padding: 20px;
+    align-items: center;
+    width: 55%;
+    height: 250px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+}
+.img-prd-cart{
+    width: 80%;
+    margin-left: 20px;
+}
+.img-prd-cart>img{
+    width: 80%;
+}
+.cart-prd-detail{
+    padding: 100px;
+}
+.title-prd-detail{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.qty-prd{
+    border: .5px solid rgba(0, 0, 0, 0.123);
+    width: 50%; 
+    margin:auto;
+
+}
+.qty-prd>button{
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.clear-prd{
+    color: orange;
+    cursor:pointer
+}
+.container-cart_subtotal{
+    background: rgba(245, 245, 245, 0.726);
+    border-radius: 5px;
+    padding: 30px;
+    width: 30%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+}
+.div-subtotal{
+    display: flex;
+    justify-content: space-around;
+}
+.botones-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+}
+
+.btn-finalizar,
+.btn-continue-shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-continue-shop{
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+.clear-cart{
+    width: 40%;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.clear-cart:hover{
+    background: red;
+    color: white;
+}
+

@@ -18,7 +18,7 @@
         "autonomia":"Hasta 20 horas",
         "bateria":"58.2Wh",
         "peso":"1.4kg",
-        "precio": "1.250,00", 
+        "precio": 1250, 
         "img": "/img/macbook.png" 
     },
     {
@@ -40,7 +40,7 @@
         "autonomia":"6 horas",
         "bateria":"38Wh",
         "peso":"1.67kg",
-        "precio": "655,00", 
+        "precio": 655, 
         "img": "/img/lenovo.png"
     },
     {
@@ -62,7 +62,7 @@
         "autonomia":"Hasta 22 horas",
         "bateria":"67Wh",
         "peso":"1.17kg",
-        "precio": "999,00", 
+        "precio":999, 
         "img": "/img/asus.png"
     },
     {
@@ -84,7 +84,7 @@
         "autonomia":"6 horas",
         "bateria":"58.2Wh",
         "peso":"2.3kg",
-        "precio": "1.399,00", 
+        "precio": 1399, 
         "img": "/img/acer.png"
     },
     {
@@ -106,7 +106,7 @@
         "autonomia":"Hasta 10 horas",
         "bateria":"52Wh",
         "peso":"1.3kg",
-        "precio": "859,00", 
+        "precio":859, 
         "img": "/img/msi.png"
     },
     {
@@ -128,7 +128,7 @@
         "autonomia":"Hasta 13 horas",
         "bateria":"63Wh",
         "peso":"1.4kg",
-        "precio": "1.250,00", 
+        "precio": 1250, 
         "img": "/img/hp.png"
     },
     {
@@ -150,7 +150,7 @@
         "autonomia":"Hasta 15 horas",
         "bateria":"49.9 Wh",
         "peso":"1.43kg",
-        "precio": "980,00", 
+        "precio": 980, 
         "img": "/img/mac3.png"
     },
     {
@@ -172,7 +172,7 @@
         "autonomia":"Hasta 14 horas",
         "bateria":"100Wh",
         "peso":"1.6kg",
-        "precio": "2.250,00", 
+        "precio": 2500, 
         "img": "/img/mac2.png"
     },
     {
@@ -194,7 +194,7 @@
         "autonomia":"Hasta 13horas",
         "bateria":"63Wh",
         "peso":"1.49kg",
-        "precio": "1.299,00", 
+        "precio": 1299, 
         "img": "/img/hp2.png"
     },
     {
@@ -216,7 +216,7 @@
         "autonomia":"Hasta 15 horas",
         "bateria":"56.9 Wh",
         "peso":"1.38kg",
-        "precio": "960,00", 
+        "precio": 960, 
         "img": "/img/lenovo2.png"
     },
     {
@@ -238,7 +238,7 @@
         "autonomia":"Hasta 8 horas",
         "bateria":"38 Wh",
         "peso":"1.65kg",
-        "precio": "549,00", 
+        "precio": 549, 
         "img": "/img/lenovo3.png"
     },
     {
@@ -260,7 +260,7 @@
         "autonomia":"Hasta 8 horas",
         "bateria":"70 Wh",
         "peso":"1.65kg",
-        "precio": "1.600,00", 
+        "precio": 1600, 
         "img": "/img/asus2.png"
     },
     {
@@ -282,7 +282,7 @@
         "autonomia":"Hasta 12 horas",
         "bateria":"76Wh",
         "peso":"1.65kg",
-        "precio": "1.500,00", 
+        "precio": 1500, 
         "img": "/img/asus3.png"
     },
     {
@@ -304,7 +304,7 @@
         "autonomia":"Hasta 12 horas",
         "bateria":"90Wh",
         "peso":"1.9kg",
-        "precio": "3.990,00", 
+        "precio": 3990, 
         "img": "/img/asus4.png"
     },
     {
@@ -326,7 +326,7 @@
         "autonomia":"Hasta 12 horas",
         "bateria":"90Wh",
         "peso":"2.39kg",
-        "precio": "3.090,00", 
+        "precio": 3090, 
         "img": "/img/msi2.png"
     },
     {
@@ -348,7 +348,7 @@
         "autonomia":"Hasta 6 horas",
         "bateria":"83Wh",
         "peso":"2.31kg",
-        "precio": "1.790,00", 
+        "precio": 1790, 
         "img": "/img/hp3.png"
     },
     {
@@ -370,7 +370,7 @@
         "autonomia":"Hasta 9 horas",
         "bateria":"42Wh",
         "peso":"1.56kg",
-        "precio": "790,00", 
+        "precio": 790, 
         "img": "/img/huawei.png"
     }
 

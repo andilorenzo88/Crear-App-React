@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { CartContextProvider } from './components/context/CartContext';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import Navbar from './components/stateless/Navbar';
 import HomeContainer from './components/container/HomeContainer';
@@ -16,7 +17,8 @@ import './App.css';
 
 function App() {
   return (
-
+  
+  <CartContextProvider>
     <BrowserRouter>
         <Navbar/>
         <main className="App">
@@ -31,7 +33,7 @@ function App() {
         </main>
         <Footer/>
     </BrowserRouter>
-
+    </CartContextProvider>
   );
 }
 

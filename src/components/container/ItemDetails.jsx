@@ -1,28 +1,38 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCartArrowDown, faTruckFast} from "@fortawesome/free-solid-svg-icons";
+import { useContext, useState } from 'react';
+import CartContext from './../context/CartContext'
+import ItemCount from './ItemCount';
 
 import './../../css/ItemDetails.css'
+import { NavLink } from 'react-router-dom';
 
+const ItemDetails = ({product}) => { 
 
-const ItemDetails = ({product}) => {
+    const {addItem} = useContext(CartContext) // funcionalidad llega del contexto del carrito para darselo al boton 'agregar al carrito'
+
+    const [checkout, setChekout] = useState (false) // Cuando su estado es TRUE aparecerá la opción de finalizar compra que direcciona al carrito
+
+    function addToCart(qty) { 
+        addItem(product, qty)
+        setChekout(true)
+    }
 
     const {img, descripcion, precio, pulgadas, pantalla, resolucion, ram, procesador, nucleos, almacenamiento, capacidad, conexiones, so, autonomia,bateria,peso} = product
 
     return (
-        <div className="container-item-items">
+        <div className="container-item-details">
 
             <div className="preview">
 
-                <div className="img-computer" >
+                <div className="img-computer">
                     <img src={(img)} alt= 'foto'/>  
                 </div>
                 
                 <div className="description">
                     <h3>{descripcion}</h3>
                     <h4>{precio} €</h4>
-                    <button type="submit">Agregar al carrito <span className="icon-btn-cart"><FontAwesomeIcon icon={faCartArrowDown}/></span></button>
-                    <p><FontAwesomeIcon icon={faTruckFast} className="icon-ship"/>Envío gratis </p>
+                    {checkout? <div><NavLink to='/carrito'><button className="btn-checkout">Finalizar compra</button></NavLink> <NavLink to='/catalogo'><button className="btn-continue-buy">Seguir comprando</button></NavLink></div>
+                    :<ItemCount addToCart={addToCart}/>} 
 
                 </div>
 
