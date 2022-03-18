@@ -3,10 +3,16 @@ import {useParams} from 'react-router'
 import ItemDetails from './ItemDetails'
 import Spinner from '../stateless/Spinner';
 
+import { collection, onSnapshot} from "firebase/firestore";
+import db from './../../firebase/firabaseClient'
+
+
+
 const ItemDetailContainer = () => {
 
-    const [itemDetail, setDetail] = useState(null)
+    const [itemDetail, setDetail] = useState([])
     const {id}= useParams()
+
 
     useEffect(() => {
 

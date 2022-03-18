@@ -10,6 +10,8 @@ export function CartContextProvider ({children}){
     const [itemsCart, setItemsCart] = useState([]);
     const [total, setTotal] = useState (0);
 
+    const [totalItemsInCart, SetTotalItemInCart] = useState(0);
+
     const operation = (precio, cantidad)=> precio * cantidad
 
     function addItem(item, qty) { 
@@ -20,10 +22,12 @@ export function CartContextProvider ({children}){
             cloneCart[index].qty += qty;
             setTotal(total + operation(item.precio, qty)) // paso 4: me translado al indice encontrado en el paso 2 y edito el item para agregar la cantidad que le transfiero desde el contador
             setItemsCart(cloneCart)
+            SetTotalItemInCart(totalItemsInCart + qty)
         }else{
             const newItemCart = {...item, qty}; // paso 5: en el caso no exista me lo agrega directamente al carrito
             setItemsCart([...itemsCart, newItemCart]);
             setTotal(total + operation(newItemCart.precio, newItemCart.qty)) // paso 4: me translado al indice encontrado en el paso 2 y edito el item para agregar la cantidad que le transfiero desde el contador
+            SetTotalItemInCart(totalItemsInCart + newItemCart.qty)
         }
     }
 
@@ -52,12 +56,14 @@ export function CartContextProvider ({children}){
         }
     }
 
+
     const context ={
         addItem: addItem, 
         clearCart: clearCart,
         itemsCart: itemsCart,
         total: total,
         removeItem: removeItem,
+        totalItemsInCart: totalItemsInCart
     }
 
     return (

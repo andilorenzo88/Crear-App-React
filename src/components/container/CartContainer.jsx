@@ -11,21 +11,26 @@ const styles = {
     width:"90%",
     margin:"50px auto"
 }
+
     
 const CartContainer = () => {
 
     const {itemsCart, total, clearCart} = useContext(CartContext)
 
     console.log('itemsCart', itemsCart);
+    console.log('carritoLENGHT', itemsCart.length);
     console.log('total', total);
 
-
+    
 
     return (
         <div className="tienda">
             <h1 style={styles}>CARRITO DE COMPRA</h1>
 
-            {itemsCart.map((item)=> {
+            {itemsCart.length === 0? 
+            <p className="cart-empty">Tu carrito esta vacio...</p>
+            :
+            itemsCart.map((item)=> {
                 return <CartDetail key={item.id} item={item}/>
             })}
 

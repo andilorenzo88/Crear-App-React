@@ -10,7 +10,7 @@ const ItemDetails = ({product}) => {
 
     const {addItem} = useContext(CartContext) // funcionalidad llega del contexto del carrito para darselo al boton 'agregar al carrito'
 
-    const [checkout, setChekout] = useState (false) // Cuando su estado es TRUE aparecerá la opción de finalizar compra que direcciona al carrito
+    const [checkout, setChekout] = useState (false) // // Cuando ItemCount emita un evento onAdd almacenará ese valor en un estado interno del ItemDetail para hacer desaparecer el ItemCount
 
     function addToCart(qty) { 
         addItem(product, qty)

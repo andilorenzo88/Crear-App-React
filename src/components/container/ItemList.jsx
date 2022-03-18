@@ -1,11 +1,12 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
+
+// import {collection,getDocs} from 'firebase/firestore'
+// import db from './../../firebase/firabaseClient'
 
 import Item from './Item';
 import Filters from '../stateless/Filters';
 import Spinner from '../stateless/Spinner';
 import './../../css/ItemList.css'
-
 
 
 const ItemList = () => {
@@ -14,7 +15,28 @@ const ItemList = () => {
     const [filters, setFilters] = useState([])
     const [spinner, setSpinner] = useState(true)
 
-    console.log(filters);
+
+    // useEffect(() => {
+
+    //     const getData = async () => {
+        
+    //         const data = await getDocs(collection(db, "productos"));
+        
+    //         let listaDeProductos = []
+        
+    //         data.forEach( doc => {
+    //             // console.log(`${doc.id} => ${ JSON.stringify(doc.data())}`);
+    //             console.log('DOC DATA', doc.data(),'DOC ID = ', doc.id);
+    //             listaDeProductos.push(doc.data())
+    //             setSpinner(false)
+    //         });
+
+    //         setProducts(listaDeProductos)
+    //     }
+    //     getData()
+    
+    // }, [])
+
 
     useEffect(()=>{
 
@@ -32,11 +54,12 @@ const ItemList = () => {
                 setSpinner(false)
             })
     }
+    
     const filterCategory = (e)=> {
 
         const search = e.target.value
         console.log(search);
-        setFilters(products.filter(cat => cat.categoria === search))
+        return setFilters(products.filter(cat => cat.categoria === search))
     }
     const filterBrand = (e)=> {
         
@@ -46,13 +69,13 @@ const ItemList = () => {
 
         const search = e.target.value
         console.log(search);
-        return setFilters(products.filter(ram => ram.RAM === search))
+        return setFilters(products.filter(ram => ram.ram === search))
     }
 
     // Recorro arreglo de productos para renderizar en la interfaz
     return (
         <>
-            <div className="spinner">{spinner!=false? <Spinner/>: ''}</div>
+            <div className="spinner">{spinner? <Spinner/>: ''}</div>
             <Filters categoria={filterCategory} brand={filterBrand} ram={filterRam}/>  
             <div className='flex-container-il'> 
                 {filters.length==0 ?

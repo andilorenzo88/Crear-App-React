@@ -61,5 +61,11 @@ body{
   
 }
 
+.badge-cart{
+  background: red;
+  border: 50%;
+  color: white;
+}
+
 
 

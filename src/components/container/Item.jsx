@@ -8,21 +8,21 @@ import './../../css/item.css'
 
 // PRODUCTO UI
 const Item = ({p}) => {
-    const {img, marca,pulgadas,storage,RAM, procesador, precio} = p
+    const {img, marca,pulgadas,capacidad,ram, procesador, precio} = p
     return (
         <div className="container-product">
             <img src={logo} alt="logo" />
             
             <div className="product-img">
-                <img src={p.img} alt="foto" />
+                <img src={img} alt="foto" />
             </div>
 
             <div className="product-details">
-                <p> {p.marca} {p.pulgadas}' | {p.storage}GB | RAM: {p.RAM}GB | {p.procesador}</p>
+                <p> {marca} {pulgadas}' | {capacidad}GB | RAM: {ram}GB | {procesador}</p>
             </div>
 
             <div className="product-price">
-                <h3>{p.precio}€</h3>
+                <h3>{precio}€</h3>
                 <p>IVA incluida</p>
             </div>
 
