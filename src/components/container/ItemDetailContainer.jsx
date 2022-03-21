@@ -1,33 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import {useParams} from 'react-router'
+
 import ItemDetails from './ItemDetails'
 import Spinner from '../stateless/Spinner';
-
-import { collection, onSnapshot} from "firebase/firestore";
-import db from './../../firebase/firabaseClient'
+import db from '../../firebase/firabaseClient';
+import { doc, getDoc } from '@firebase/firestore';
 
 
 
 const ItemDetailContainer = () => {
 
     const [itemDetail, setDetail] = useState([])
-    const {id}= useParams()
 
+    const {id}= useParams()
 
     useEffect(() => {
 
-        setTimeout(getDetail,2000)
+        const docRef = doc(db, 'productos', id)
+        const docSnap = getDoc(docRef)
 
-    },[])
+        docSnap.then(r => setDetail(r.data()))
+
+    }, [id])
     
-    const getDetail = () => {
+    
+    // useEffect(() => {
 
-        const url = fetch('/data/productsDetails.json')
+    //     setTimeout(getDetail,2000)
 
-        url.then((res) =>res.json()).then((res) => {
-            console.log(res);
-            setDetail(res[id-1])}) 
-    }
+    // },[])
+    
+    // const getDetail = () => {
+
+    //     const url = fetch('/data/productsDetails.json')
+
+    //     url.then((res) =>res.json()).then((res) => {
+    //         console.log(res);
+    //         setDetail(res[id-1])}) 
+    // }
 
     return (
         <div>

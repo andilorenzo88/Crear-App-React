@@ -1,12 +1,13 @@
 import React, { useEffect, useState} from 'react';
 
-// import {collection,getDocs} from 'firebase/firestore'
-// import db from './../../firebase/firabaseClient'
 
 import Item from './Item';
 import Filters from '../stateless/Filters';
 import Spinner from '../stateless/Spinner';
 import './../../css/ItemList.css'
+
+import { collection, getDocs } from '@firebase/firestore';
+import db from '../../firebase/firabaseClient';
 
 
 const ItemList = () => {
@@ -16,17 +17,40 @@ const ItemList = () => {
     const [spinner, setSpinner] = useState(true)
 
 
-    // useEffect(() => {
+    useEffect(() => {
 
+        const getProducts = async () => {
+
+            const data = await getDocs(collection(db, 'productos'))
+
+            let arrayProducts = []
+
+            data.forEach( (doc) => {
+                arrayProducts.push(doc.data())
+                console.log(arrayProducts);
+            });
+            
+            setProducts(arrayProducts)
+            setSpinner(false)
+        }
+
+        getProducts()
+
+    }, [])
+    
+    
+    // useEffect(() =>    
+    
     //     const getData = async () => {
         
-    //         const data = await getDocs(collection(db, "productos"));
+    //         const data = await getDocs(collection(db, "productos"))
         
     //         let listaDeProductos = []
         
     //         data.forEach( doc => {
     //             // console.log(`${doc.id} => ${ JSON.stringify(doc.data())}`);
-    //             console.log('DOC DATA', doc.data(),'DOC ID = ', doc.id);
+    //             // console.log('DOC DATA', doc.data(),'DOC ID = ', doc.id);
+
     //             listaDeProductos.push(doc.data())
     //             setSpinner(false)
     //         });
@@ -35,25 +59,26 @@ const ItemList = () => {
     //     }
     //     getData()
     
+    
     // }, [])
 
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-        setTimeout(getProducts, 2000)
-    },[])
+    //     setTimeout(getProducts, 2000)
+    // },[])
 
-    const getProducts = () => {
+    // const getProducts = () => {
 
-        const request = fetch('/data/products.json')
+    //     const request = fetch('/data/products.json')
 
-        request.then(response =>response.json())
-            .then(res => {
-                console.log(res);
-                setProducts(res);
-                setSpinner(false)
-            })
-    }
+    //     request.then(response =>response.json())
+    //         .then(res => {
+    //             console.log(res);
+    //             setProducts(res);
+    //             setSpinner(false)
+    //         })
+    // }
     
     const filterCategory = (e)=> {
 

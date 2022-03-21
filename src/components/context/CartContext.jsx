@@ -38,6 +38,8 @@ export function CartContextProvider ({children}){
     function clearCart (){
         setItemsCart([])
         setTotal(0)
+        SetTotalItemInCart(0)
+
     }
 
 
@@ -53,6 +55,8 @@ export function CartContextProvider ({children}){
 
             cloneCart.splice(index,1);
             setItemsCart(cloneCart);
+            SetTotalItemInCart(totalItemsInCart - itemsCart[index].qty)
+
         }
     }
 

@@ -22,8 +22,6 @@ const badgeCart = {
     textAlign: 'center'
 }
 
-
-
 const CartWidget = () => {
 
     const {totalItemsInCart} = useContext(CartContext)
@@ -35,7 +33,7 @@ const CartWidget = () => {
             <a href="#" style={{color:'black'}}>
             <FontAwesomeIcon icon={faCartArrowDown} />
             </a>
-            <div style={badgeCart}>{totalItemsInCart}</div>
+            <div style={badgeCart}>{totalItemsInCart > 0 ? totalItemsInCart: ''}</div>
         </div>
     )
 }
