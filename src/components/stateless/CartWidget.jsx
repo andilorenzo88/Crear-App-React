@@ -30,9 +30,7 @@ const CartWidget = () => {
     return (
 
         <div  style={cart} className='cart'>
-            <a href="#" style={{color:'black'}}>
-            <FontAwesomeIcon icon={faCartArrowDown} />
-            </a>
+            <FontAwesomeIcon style={{color:'black'}} icon={faCartArrowDown} />
             <div style={badgeCart}>{totalItemsInCart > 0 ? totalItemsInCart: ''}</div>
         </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '../stateless/Home'
+import Home from './../stateless/Home'
 
 const HomeContainer = () => {
 

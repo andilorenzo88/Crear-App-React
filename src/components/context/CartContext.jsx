@@ -12,56 +12,60 @@ export function CartContextProvider ({children}){
 
     const [totalItemsInCart, SetTotalItemInCart] = useState(0);
 
-    const operation = (precio, cantidad)=> precio * cantidad
+
+    const calc = (precio, cantidad)=> precio * cantidad
+
+     // Paso 1: Se recorre el carrito para obtener resultado booleano
+     function isInCart (id){ 
+        return itemsCart.some((product)=> product.id === id)
+    }
 
     function addItem(item, qty) { 
 
-        if (isInCart(item.id)) { // paso 2: en el caso exista el producto en el carrito recorro los elementos para saber el indice
+        // Paso 2: En el caso exista el producto se recorre nuevamente ek arreglo para identificar el index
+        if (isInCart(item.id)) { 
             let index = itemsCart.findIndex( i => i.id === item.id);
-            let cloneCart = [...itemsCart]; //paso 3: clono el carrito 
+            //Paso 3: Clonar carrito y ubicarse en el index encontrado para sumar cantidad
+            let cloneCart = [...itemsCart]; 
             cloneCart[index].qty += qty;
-            setTotal(total + operation(item.precio, qty)) // paso 4: me translado al indice encontrado en el paso 2 y edito el item para agregar la cantidad que le transfiero desde el contador
+            //Paso 4: Actualizar total, carrito y cantidades totales
+            setTotal(total + calc(item.precio, qty)) 
             setItemsCart(cloneCart)
             SetTotalItemInCart(totalItemsInCart + qty)
         }else{
-            const newItemCart = {...item, qty}; // paso 5: en el caso no exista me lo agrega directamente al carrito
+            // paso 5: en el caso no exista el producto se agregar 'qty' como nueva prop y se actualiza el estado del carrito, total y cantidades
+            const newItemCart = {...item, qty}; 
+            console.log('New item in Cart: ',newItemCart);
             setItemsCart([...itemsCart, newItemCart]);
-            setTotal(total + operation(newItemCart.precio, newItemCart.qty)) // paso 4: me translado al indice encontrado en el paso 2 y edito el item para agregar la cantidad que le transfiero desde el contador
+            setTotal(total + calc(newItemCart.precio, newItemCart.qty))
             SetTotalItemInCart(totalItemsInCart + newItemCart.qty)
         }
     }
 
-    function isInCart (id){
-        return itemsCart.some((product)=> product.id === id)
+    function removeItem (id) {
+
+        if (isInCart(id)) {
+            let index = itemsCart.findIndex( i => i.id === id);
+            
+            console.log('Importe a descontar = ',itemsCart[index].precio*itemsCart[index].qty);
+            let totalIndex = itemsCart[index].precio*itemsCart[index].qty
+            setTotal(total - totalIndex)
+            SetTotalItemInCart(totalItemsInCart - itemsCart[index].qty)
+
+            let cloneCart = [...itemsCart];
+            cloneCart.splice(index,1);
+            setItemsCart(cloneCart);
+        }
     }
 
     function clearCart (){
         setItemsCart([])
         setTotal(0)
         SetTotalItemInCart(0)
-
     }
 
-
-    const removeItem = (id)=> {
-        if (isInCart(id)) {
-            let index = itemsCart.findIndex( i => i.id === id);
-            console.log('index', index);
-            let cloneCart = [...itemsCart];
-
-            console.log('totalINDEX',itemsCart[index].precio*itemsCart[index].qty);
-            let totalIndex = itemsCart[index].precio*itemsCart[index].qty
-            setTotal(total - totalIndex)
-
-            cloneCart.splice(index,1);
-            setItemsCart(cloneCart);
-            SetTotalItemInCart(totalItemsInCart - itemsCart[index].qty)
-
-        }
-    }
-
-
-    const context ={
+    
+    const context = {
         addItem: addItem, 
         clearCart: clearCart,
         itemsCart: itemsCart,

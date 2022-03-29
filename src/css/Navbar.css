@@ -1,14 +1,6 @@
-body{
-  margin: 0px;
-  padding: 0px;
-}
-
-.App {
-  text-align: center;
-  
-}
 .header{
   height: 150px;
+  width: 100%;
   background: black;
   display: flex;
   justify-content: flex-start;
@@ -25,12 +17,11 @@ body{
 }
 .title-app {
   color: wheat;
-  /* font-size: .9rem; */
+  /* font-size: 1rem; */
   text-shadow: 1px 1px 10px gold;
-  width: 200px;
+  display: block;
   text-align: start;
   margin-left: -20px;
-  display: inline-block;
 }
 .title-app>h1{
   margin-left: auto;
@@ -56,9 +47,7 @@ body{
 
 .icono-pegaso{
   width: 150px;
-  height: 150px;
-  margin-top: 0px;
-  
+  margin-top: 0px;  
 }
 
 .badge-cart{
@@ -67,5 +56,29 @@ body{
   color: white;
 }
 
+@media screen and (max-width: 480px){
+
+  .title-app {
+    font-size: 1rem;
+  }
+  .navbar-container>a{
+    font-size: .7rem;
+  }
+  .icono-pegaso{
+    width: 100px;
+  }
+  .navbar-container{
+    height: 30px;
+  }
+  .header{
+    height: 110px;
+  }
+  .cart {
+    padding: 5px;
+    font-size: 1rem;
+}
+  
+
+}
 
 

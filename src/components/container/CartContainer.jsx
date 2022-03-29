@@ -5,23 +5,18 @@ import { NavLink } from 'react-router-dom';
 import './../../css/CartDetail.css'
 
 
-const styles = {
-    
+const styles = {  
     boxShadow: "1px 1px 3px black",
     width:"90%",
     margin:"50px auto"
 }
 
-    
 const CartContainer = () => {
 
     const {itemsCart, total, clearCart} = useContext(CartContext)
 
-    console.log('itemsCart', itemsCart);
-    console.log('carritoLENGHT', itemsCart.length);
-    console.log('total', total);
-
-    
+    console.log('Carrito', itemsCart);
+    console.log('Total Amount = ', total);
 
     return (
         <div className="tienda">
@@ -40,7 +35,7 @@ const CartContainer = () => {
                     <h3>€ {total}</h3>
                 </div>
                 <div className="botones-carrito">
-                    <NavLink to=''className="btn-finalizar">Pagar</NavLink>
+                    <NavLink to='/checkout'className="btn-finalizar">Finalizar compra</NavLink>
                     <NavLink to='/catalogo' className="btn-continue-shop">Continuar comprando</NavLink>
                     <button onClick={clearCart} className="clear-cart" >Vaciar Carrito</button>
                 </div>

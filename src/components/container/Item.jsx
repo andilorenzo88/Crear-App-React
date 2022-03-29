@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-solid-svg-icons";
 import logo from './../../Assets/img/logo.png'
 
-import './../../css/item.css'
+import './../../css/ItemList.css'
 
 // PRODUCTO UI
 const Item = ({p}) => {

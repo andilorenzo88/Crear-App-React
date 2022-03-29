@@ -1,0 +1,133 @@
+.details-user{
+    display: flex;
+    width: 100%;
+    padding-bottom: 70px;
+}
+.form-details-title{
+    background: rgba(0, 0, 0, 0.39);
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    /* border-radius: 6px; */
+    width: 90%;
+}
+.form-details>p{
+    margin: 20px;
+}
+.form-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    margin: 50px 20px 100px 30px ;
+    width: 65%;
+}
+.form-details>div>input{
+    margin: 20px;
+    background: none;
+    width: 250px;
+    height: 2rem;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.281);
+    color: steelblue;
+    font-weight: bold;
+}
+.detail-products{
+    display: flex;
+    flex-direction: column;
+}
+.resume{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background: rgba(128, 128, 128, 0.096);
+    border-left: 1px solid rgba(128, 128, 128, 0.116);
+}
+.resume>h3{
+    margin-top: 100px;
+}
+.item-resume{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    width: 100%;
+}
+.total-amount{
+    border-top: 1px solid rgba(0, 0, 0, 0.178);
+    padding-top: 10px;
+    font-weight: bold;
+}
+.btn-comprar{
+    width: 50%;
+    height: 40px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    margin: 30px auto;
+    border: none;
+    border-radius: 6px;
+}
+
+.detail-checkout{
+    width:100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+}
+.detail-checkout>p{
+    font-size: .8rem;
+    margin-left: 5px;
+
+}
+.img-checkout{
+    width: 20%;
+}
+
+.total-items-in-cart{
+    background: rgb(59, 59, 59);
+    width: 20px;
+    color: ivory;
+    border-radius: 50%;
+    position: absolute; 
+    top:-5px
+}
+
+.input-email{
+    display: flex;
+}
+.input-email>p{
+    margin: 25px 0; 
+    border-radius: 5px;
+    color: red;
+    font-weight: bold;
+    font-size: .9rem;
+    
+}
+.tracking-id{
+
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+}
+.tracking-id>h2{
+    color: steelblue;
+}
+.tracking-id>h2>span{
+    border: .5px solid black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0 5px;
+}
+.tracking-id>h2>span:hover{
+    border: 2px solid red;
+}
+
+.tracking-id>p{
+    font-weight: bold;
+}

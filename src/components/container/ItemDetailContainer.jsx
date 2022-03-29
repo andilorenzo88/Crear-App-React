@@ -11,37 +11,25 @@ import { doc, getDoc } from '@firebase/firestore';
 const ItemDetailContainer = () => {
 
     const [itemDetail, setDetail] = useState([])
+    const [spinner, setSpinner] = useState(true)
 
     const {id}= useParams()
 
     useEffect(() => {
 
-        const docRef = doc(db, 'productos', id)
-        const docSnap = getDoc(docRef)
-
-        docSnap.then(r => setDetail(r.data()))
-
+        setTimeout(() => {
+            const docRef = doc(db, 'productos', id)
+            const docSnap = getDoc(docRef)
+    
+            docSnap.then(r => setDetail(r.data()));
+            setSpinner(false)   
+        }, 1000);
+        
     }, [id])
     
-    
-    // useEffect(() => {
-
-    //     setTimeout(getDetail,2000)
-
-    // },[])
-    
-    // const getDetail = () => {
-
-    //     const url = fetch('/data/productsDetails.json')
-
-    //     url.then((res) =>res.json()).then((res) => {
-    //         console.log(res);
-    //         setDetail(res[id-1])}) 
-    // }
-
     return (
         <div>
-            {itemDetail? <ItemDetails product={itemDetail}/> :  <Spinner/> }
+            {spinner? <Spinner/> : <ItemDetails product={itemDetail}/>}
         </div>
     )
 }

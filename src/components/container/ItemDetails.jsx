@@ -8,34 +8,31 @@ import { NavLink } from 'react-router-dom';
 
 const ItemDetails = ({product}) => { 
 
-    const {addItem} = useContext(CartContext) // funcionalidad llega del contexto del carrito para darselo al boton 'agregar al carrito'
+    const {addItem} = useContext(CartContext) // Utilizo función del contexto para agregar productos al carrito
 
-    const [checkout, setChekout] = useState (false) // // Cuando ItemCount emita un evento onAdd almacenará ese valor en un estado interno del ItemDetail para hacer desaparecer el ItemCount
+    const [goToCart, setGoToCart] = useState (false) // // Cuando ItemCount emita un evento onAdd almacenará ese valor en un estado interno del ItemDetail para hacer desaparecer el ItemCount
 
     function addToCart(qty) { 
         addItem(product, qty)
-        setChekout(true)
+        setGoToCart(true)
     }
 
-    const {img, descripcion, precio, pulgadas, pantalla, resolucion, ram, procesador, nucleos, almacenamiento, capacidad, conexiones, so, autonomia,bateria,peso} = product
+    const {img, descripcion, precio, pulgadas, pantalla, resolucion, ram, procesador, nucleos, almacenamiento, capacidad, conexiones, so, autonomia,bateria,peso, stock} = product
 
     return (
         <div className="container-item-details">
 
             <div className="preview">
-
                 <div className="img-computer">
                     <img src={(img)} alt= 'foto'/>  
-                </div>
-                
+                </div>   
                 <div className="description">
                     <h3>{descripcion}</h3>
                     <h4>{precio} €</h4>
-                    {checkout? <div><NavLink to='/carrito'><button className="btn-checkout">Finalizar compra</button></NavLink> <NavLink to='/catalogo'><button className="btn-continue-buy">Seguir comprando</button></NavLink></div>
-                    :<ItemCount addToCart={addToCart}/>} 
-
+                    <p className='stock'>Stock: {stock}</p>
+                    {goToCart? <div><NavLink to='/carrito'><button className="btn-checkout">Ir al carrito</button></NavLink> <NavLink to='/catalogo'><button className="btn-continue-buy">Seguir comprando</button></NavLink></div>
+                    :<ItemCount addToCart={addToCart} stock={stock}/>} 
                 </div>
-
             </div>
 
             <div className="technical-descript">

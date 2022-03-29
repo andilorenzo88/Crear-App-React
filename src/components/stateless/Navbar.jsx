@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import logo from './../../Assets/img/logo.png'
 import CartWidget from './CartWidget'
 
+import './../../css/Navbar.css'
+
 
 
 
@@ -17,7 +19,6 @@ const Navbar = () => {
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/catalogo'>Productos</NavLink>
           <NavLink to='/contact'>Contacto</NavLink>
-          <NavLink to='/checkin'>Registrarse</NavLink>
           <NavLink to='/carrito'><CartWidget/></NavLink>
         </div> 
     </section>
