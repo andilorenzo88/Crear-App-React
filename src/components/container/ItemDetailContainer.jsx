@@ -4,7 +4,7 @@ import {useParams} from 'react-router'
 import ItemDetails from './ItemDetails'
 import Spinner from '../stateless/Spinner';
 import db from '../../firebase/firabaseClient';
-import { doc, getDoc } from '@firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 
 
 
