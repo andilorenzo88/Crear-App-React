@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import Item from './Item';
+import Item from './../stateless/Item';
 import Filters from './../stateless/Filters';
 import Spinner from './../stateless/Spinner';
 import './../../css/ItemList.css'

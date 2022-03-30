@@ -42,8 +42,13 @@
     cursor: pointer;
 }
 .clear-prd{
+    margin-top: 10px;
+}
+.clear-prd>button{
+    border: none;
+    background: none;
     color: orange;
-    cursor:pointer
+    cursor: pointer;
 }
 .container-cart_subtotal{
     background: rgba(245, 245, 245, 0.726);

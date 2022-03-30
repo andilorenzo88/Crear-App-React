@@ -20,8 +20,8 @@ const CartDetail = ({item}) => {
                     <div className="qty-prd">
                         <p>Cantidad: {qty} </p>
                     </div>
-                    <div className="clear-prd">
-                        <p onClick={()=>removeItem(id)}>Eliminar</p>
+                    <div className="clear-prd" onClick={()=>removeItem(id)}>
+                        <button>Eliminar</button>
                     </div>
                 </div>
             <div className="unit-price">

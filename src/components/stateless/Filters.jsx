@@ -2,7 +2,6 @@ import React from 'react'
 import './../../css/Filters.css'
 
 
-
 const Filters = ({categoria, brand, ram}) => {
 
     return (
